@@ -11,9 +11,12 @@
 		FA8BCAD51B4084B600B7A166 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8BCAD41B4084B600B7A166 /* main.m */; };
 		FA8BCAD81B4084B600B7A166 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8BCAD71B4084B600B7A166 /* AppDelegate.m */; };
 		FA8BCAE01B4084B600B7A166 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8BCADF1B4084B600B7A166 /* Images.xcassets */; };
-		FA8BCAE31B4084B600B7A166 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8BCAE11B4084B600B7A166 /* LaunchScreen.xib */; };
 		FA8BCAEF1B4084B600B7A166 /* PhotoViewrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8BCAEE1B4084B600B7A166 /* PhotoViewrTests.m */; };
-		FA8BCAFC1B4088B300B7A166 /* Controllers in Resources */ = {isa = PBXBuildFile; fileRef = FA8BCAFB1B4088B300B7A166 /* Controllers */; };
+		FA8BCB011B408AC500B7A166 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA8BCB031B408AC500B7A166 /* Localizable.strings */; };
+		FA8BCB0B1B408BC300B7A166 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8BCB0A1B408BC300B7A166 /* Photo.m */; };
+		FA8BCB0E1B408BCD00B7A166 /* PhotosVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8BCB0D1B408BCD00B7A166 /* PhotosVC.m */; };
+		FA8BCB111B408C0A00B7A166 /* Photos.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8BCB101B408C0A00B7A166 /* Photos.m */; };
+		FA8BCB141B408CAC00B7A166 /* APIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8BCB131B408CAC00B7A166 /* APIHandler.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +39,18 @@
 		FA8BCAD61B4084B600B7A166 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FA8BCAD71B4084B600B7A166 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FA8BCADF1B4084B600B7A166 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FA8BCAE21B4084B600B7A166 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FA8BCAE81B4084B600B7A166 /* PhotoViewrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoViewrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8BCAED1B4084B600B7A166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA8BCAEE1B4084B600B7A166 /* PhotoViewrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewrTests.m; sourceTree = "<group>"; };
-		FA8BCAFB1B4088B300B7A166 /* Controllers */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Controllers; sourceTree = "<group>"; };
+		FA8BCB021B408AC500B7A166 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA8BCB091B408BC300B7A166 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photo.h; path = Model/Photo.h; sourceTree = "<group>"; };
+		FA8BCB0A1B408BC300B7A166 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = Model/Photo.m; sourceTree = "<group>"; };
+		FA8BCB0C1B408BCD00B7A166 /* PhotosVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotosVC.h; path = Controllers/PhotosVC.h; sourceTree = "<group>"; };
+		FA8BCB0D1B408BCD00B7A166 /* PhotosVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotosVC.m; path = Controllers/PhotosVC.m; sourceTree = "<group>"; };
+		FA8BCB0F1B408C0A00B7A166 /* Photos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photos.h; path = Model/Photos.h; sourceTree = "<group>"; };
+		FA8BCB101B408C0A00B7A166 /* Photos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photos.m; path = Model/Photos.m; sourceTree = "<group>"; };
+		FA8BCB121B408CAC00B7A166 /* APIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHandler.h; sourceTree = "<group>"; };
+		FA8BCB131B408CAC00B7A166 /* APIHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHandler.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +114,10 @@
 			children = (
 				FA8BCAD61B4084B600B7A166 /* AppDelegate.h */,
 				FA8BCAD71B4084B600B7A166 /* AppDelegate.m */,
-				FA8BCADF1B4084B600B7A166 /* Images.xcassets */,
-				FA8BCAE11B4084B600B7A166 /* LaunchScreen.xib */,
-				FA8BCAFB1B4088B300B7A166 /* Controllers */,
+				FA8BCB121B408CAC00B7A166 /* APIHandler.h */,
+				FA8BCB131B408CAC00B7A166 /* APIHandler.m */,
+				FA8BCB071B408BAC00B7A166 /* Model */,
+				FA8BCB081B408BB300B7A166 /* Controller */,
 				FA8BCAD21B4084B600B7A166 /* Supporting Files */,
 			);
 			path = PhotoViewr;
@@ -115,6 +126,8 @@
 		FA8BCAD21B4084B600B7A166 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA8BCADF1B4084B600B7A166 /* Images.xcassets */,
+				FA8BCB031B408AC500B7A166 /* Localizable.strings */,
 				FA8BCAD31B4084B600B7A166 /* Info.plist */,
 				FA8BCAD41B4084B600B7A166 /* main.m */,
 			);
@@ -136,6 +149,26 @@
 				FA8BCAED1B4084B600B7A166 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA8BCB071B408BAC00B7A166 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA8BCB091B408BC300B7A166 /* Photo.h */,
+				FA8BCB0A1B408BC300B7A166 /* Photo.m */,
+				FA8BCB0F1B408C0A00B7A166 /* Photos.h */,
+				FA8BCB101B408C0A00B7A166 /* Photos.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FA8BCB081B408BB300B7A166 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA8BCB0C1B408BCD00B7A166 /* PhotosVC.h */,
+				FA8BCB0D1B408BCD00B7A166 /* PhotosVC.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +235,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = FA8BCAC61B4084B600B7A166;
 			productRefGroup = FA8BCAD01B4084B600B7A166 /* Products */;
@@ -220,8 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA8BCAE31B4084B600B7A166 /* LaunchScreen.xib in Resources */,
-				FA8BCAFC1B4088B300B7A166 /* Controllers in Resources */,
+				FA8BCB011B408AC500B7A166 /* Localizable.strings in Resources */,
 				FA8BCAE01B4084B600B7A166 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,8 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8BCB0B1B408BC300B7A166 /* Photo.m in Sources */,
+				FA8BCB141B408CAC00B7A166 /* APIHandler.m in Sources */,
 				FA8BCAD81B4084B600B7A166 /* AppDelegate.m in Sources */,
+				FA8BCB111B408C0A00B7A166 /* Photos.m in Sources */,
 				FA8BCAD51B4084B600B7A166 /* main.m in Sources */,
+				FA8BCB0E1B408BCD00B7A166 /* PhotosVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,12 +332,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FA8BCAE11B4084B600B7A166 /* LaunchScreen.xib */ = {
+		FA8BCB031B408AC500B7A166 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FA8BCAE21B4084B600B7A166 /* Base */,
+				FA8BCB021B408AC500B7A166 /* en */,
 			);
-			name = LaunchScreen.xib;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -344,7 +379,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -381,7 +416,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
