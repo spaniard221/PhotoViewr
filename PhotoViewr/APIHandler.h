@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Photo.h"
 
 @interface APIHandler : NSObject
+
++(NSString *)flickrPhotoListURL;
++(NSString *)photoURL:(Photo *)photo isThumbnail:(BOOL)isThumb;
 
 @end
