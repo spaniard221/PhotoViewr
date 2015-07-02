@@ -11,4 +11,7 @@
 
 @interface PhotoDetailVC : CoreVC
 
+
+-(instancetype)initWithPhoto:(Photo *)photo Image:(UIImage *)image;
+
 @end

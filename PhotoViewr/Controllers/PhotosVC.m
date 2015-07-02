@@ -7,11 +7,12 @@
 //
 
 #import "PhotosVC.h"
+#import "PhotoDetailVC.h"
 #import "PhotoCollectionCell.h"
 #import "LoaderCollectionCell.h"
+#import "PagesCollection.h"
 #import "Page.h"
 #import "ReloadButton.h"
-#import "PagesCollection.h"
 
 
 
@@ -228,6 +229,147 @@
 
 
 #pragma mark UICollectionView delegate methods
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    
+    // Load 2 sections, 0=Photo cells, 1=Loader cell
+    NSInteger sections=[[PagesCollection sharedManager] numberOfPagesLoaded]+1;
+    
+    return sections;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    
+    // Loader cell
+    if (section==[[PagesCollection sharedManager] numberOfPagesLoaded])
+        return 1;
+    
+    // Photo cell
+    Page *page=[[PagesCollection sharedManager] pageAtIndex:section];
+    return page.photoCount;
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    // Loader cell
+    if (indexPath.section==[[PagesCollection sharedManager] numberOfPagesLoaded])
+        return CGSizeMake(collectionView.frame.size.width, 60);
+    
+    
+    // Photo cells
+    NSNumber *numCells=NUMBER_OF_CELL_PER_ROW;
+    CGFloat width=[[UIScreen mainScreen] bounds].size.width/[numCells integerValue];
+    return CGSizeMake(width, width);
+}
+
+-(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
+    
+    return 0;
+}
+
+-(CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
+    
+    return 0;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    if (indexPath.section==[[PagesCollection sharedManager] numberOfPagesLoaded]){
+        
+        LoaderCollectionCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:CELL_LOADER_ID forIndexPath:indexPath];
+        [cell setUpUI];
+        
+        
+        // If the number of pages +1 have not been exceeded, then
+        // fetch data from the next page
+        if ([[PagesCollection sharedManager] canRequestMorePagesFromAPI])
+            [self fetchDataFromAPIForPage:[[PagesCollection sharedManager] lastPageLoaded]+1];
+        
+        else // Hide loader to imply that are no more items to load
+            [cell.loader stopAnimating];
+        
+        
+        return cell;
+    }
+    else{
+        
+        
+        // Get cell
+        PhotoCollectionCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:CELL_IDENTIFIER
+                                                                            forIndexPath:indexPath];
+        
+        cell.backgroundColor=[UIColor clearColor];
+        cell.imgVPhoto.hidden=YES;
+        
+        // Set all the cell's views
+        [cell setUI];
+        
+        // Get current photo
+        Page *page=[[PagesCollection sharedManager] pageAtIndex:indexPath.section];
+        if (page != nil){
+            
+            if (indexPath.row < [page.photos count]){
+                
+                Photo *photo=[page.photos objectAtIndex:indexPath.row];
+                
+                // Get image from URL
+                cell.imgVPhoto.hidden=NO;
+                [cell.imgVPhoto sd_setImageWithURL:[NSURL URLWithString:[APIHandler photoURL:photo isThumbnail:YES]]];
+            }
+        }
+        
+        
+        return cell;
+    }
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    // If the section corresponds with the photo section
+    if (indexPath.section < [[PagesCollection sharedManager] numberOfPagesLoaded]){
+        
+        PhotoCollectionCell *cell= (PhotoCollectionCell *)[collectionView cellForItemAtIndexPath:indexPath];
+        
+        // Get selected photo
+        Page *page=[[PagesCollection sharedManager] pageAtIndex:indexPath.section];
+        if (indexPath.row < [page.photos count]){
+            
+            
+            Photo *photo=[page.photos objectAtIndex:indexPath.row];
+            
+            // Instantiate the detail viewcontroller
+            PhotoDetailVC *photoDetailVC=[[PhotoDetailVC alloc] initWithPhoto:photo Image:cell.imgVPhoto.image];
+            
+            // Animate cell selection
+            [UIView animateWithDuration:0.3 animations:^{
+                
+                cell.imgVPhoto.alpha=0.7;
+                
+            }completion:^(BOOL finished){
+                
+                [UIView animateWithDuration:0.3 animations:^{
+                    
+                    cell.imgVPhoto.alpha=1.0;
+                    
+                }completion:^(BOOL finished){
+                    
+                    // When animation has concluded, then push the viewcontroller
+                    if (finished){
+                        
+                        [self.navigationController pushViewController:photoDetailVC animated:YES];
+                        
+                    }
+                }];
+            }];
+        }
+        else
+            [collectionView reloadItemsAtIndexPaths:[NSArray arrayWithObject:indexPath]];
+    }
+}
+
+
 
 
 

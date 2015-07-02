@@ -10,9 +10,24 @@
 
 @interface PhotoDetailVC ()
 
+@property (retain, nonatomic) Photo *photoSelected;
+@property (retain, nonatomic) UIImage *imageBg;
+
 @end
 
 @implementation PhotoDetailVC
+
+-(instancetype)initWithPhoto:(Photo *)photo Image:(UIImage *)image{
+    
+    self=[super init];
+    if (self) {
+        
+        self.photoSelected=photo;
+        self.imageBg=image;
+    }
+    
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
