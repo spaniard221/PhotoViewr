@@ -6,8 +6,9 @@
 //  Copyright (c) 2015 Alex Villamizar. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "CoreVC.h"
+#import "Photo.h"
 
-@interface PhotoDetailVC : UIViewController
+@interface PhotoDetailVC : CoreVC
 
 @end

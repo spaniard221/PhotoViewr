@@ -21,6 +21,9 @@
 		FABBE3F51B45C60500A59593 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBE3F41B45C60500A59593 /* Response.m */; };
 		FABBE3F81B45C68900A59593 /* PagesCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBE3F71B45C68900A59593 /* PagesCollection.m */; };
 		FABBE3FA1B45C70F00A59593 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABBE3F91B45C70F00A59593 /* LaunchScreen.xib */; };
+		FABBE3FD1B45CEB400A59593 /* UINavigationController+StatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBE3FC1B45CEB400A59593 /* UINavigationController+StatusBarStyle.m */; };
+		FABBE4001B45CEF600A59593 /* CoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBE3FF1B45CEF600A59593 /* CoreVC.m */; };
+		FABBE40A1B45D09400A59593 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBE4091B45D09400A59593 /* UIImage+ImageEffects.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,12 @@
 		FABBE3F61B45C68900A59593 /* PagesCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PagesCollection.h; path = Model/PagesCollection.h; sourceTree = "<group>"; };
 		FABBE3F71B45C68900A59593 /* PagesCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PagesCollection.m; path = Model/PagesCollection.m; sourceTree = "<group>"; };
 		FABBE3F91B45C70F00A59593 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		FABBE3FB1B45CEB400A59593 /* UINavigationController+StatusBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+StatusBarStyle.h"; sourceTree = "<group>"; };
+		FABBE3FC1B45CEB400A59593 /* UINavigationController+StatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+StatusBarStyle.m"; sourceTree = "<group>"; };
+		FABBE3FE1B45CEF600A59593 /* CoreVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreVC.h; path = Controllers/CoreVC.h; sourceTree = "<group>"; };
+		FABBE3FF1B45CEF600A59593 /* CoreVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreVC.m; path = Controllers/CoreVC.m; sourceTree = "<group>"; };
+		FABBE4081B45D09400A59593 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		FABBE4091B45D09400A59593 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +138,7 @@
 				FA8BCB131B408CAC00B7A166 /* APIHandler.m */,
 				FA8BCB071B408BAC00B7A166 /* Model */,
 				FA8BCB081B408BB300B7A166 /* Controller */,
+				FABBE4011B45CF2B00A59593 /* Tools */,
 				FA8BCAD21B4084B600B7A166 /* Supporting Files */,
 			);
 			path = PhotoViewr;
@@ -185,8 +195,21 @@
 				FA8BCB0D1B408BCD00B7A166 /* PhotosVC.m */,
 				FA8BCB151B40974300B7A166 /* PhotoDetailVC.h */,
 				FA8BCB161B40974300B7A166 /* PhotoDetailVC.m */,
+				FABBE3FE1B45CEF600A59593 /* CoreVC.h */,
+				FABBE3FF1B45CEF600A59593 /* CoreVC.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		FABBE4011B45CF2B00A59593 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				FABBE4081B45D09400A59593 /* UIImage+ImageEffects.h */,
+				FABBE4091B45D09400A59593 /* UIImage+ImageEffects.m */,
+				FABBE3FB1B45CEB400A59593 /* UINavigationController+StatusBarStyle.h */,
+				FABBE3FC1B45CEB400A59593 /* UINavigationController+StatusBarStyle.m */,
+			);
+			name = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,8 +353,11 @@
 				FA8BCAD81B4084B600B7A166 /* AppDelegate.m in Sources */,
 				FA8BCB171B40974300B7A166 /* PhotoDetailVC.m in Sources */,
 				FABBE3F51B45C60500A59593 /* Response.m in Sources */,
+				FABBE4001B45CEF600A59593 /* CoreVC.m in Sources */,
+				FABBE40A1B45D09400A59593 /* UIImage+ImageEffects.m in Sources */,
 				FA8BCAD51B4084B600B7A166 /* main.m in Sources */,
 				FA8BCB0E1B408BCD00B7A166 /* PhotosVC.m in Sources */,
+				FABBE3FD1B45CEB400A59593 /* UINavigationController+StatusBarStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
