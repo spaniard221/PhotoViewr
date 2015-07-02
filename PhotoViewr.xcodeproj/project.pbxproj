@@ -24,6 +24,9 @@
 		FABBE3FD1B45CEB400A59593 /* UINavigationController+StatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBE3FC1B45CEB400A59593 /* UINavigationController+StatusBarStyle.m */; };
 		FABBE4001B45CEF600A59593 /* CoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBE3FF1B45CEF600A59593 /* CoreVC.m */; };
 		FABBE40A1B45D09400A59593 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBE4091B45D09400A59593 /* UIImage+ImageEffects.m */; };
+		FABBE40E1B45D89800A59593 /* PhotoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBE40D1B45D89800A59593 /* PhotoCollectionCell.m */; };
+		FABBE4111B45D8AC00A59593 /* LoaderCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBE4101B45D8AC00A59593 /* LoaderCollectionCell.m */; };
+		FABBE4141B45D8C200A59593 /* ReloadButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBE4131B45D8C200A59593 /* ReloadButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,12 @@
 		FABBE3FF1B45CEF600A59593 /* CoreVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreVC.m; path = Controllers/CoreVC.m; sourceTree = "<group>"; };
 		FABBE4081B45D09400A59593 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		FABBE4091B45D09400A59593 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		FABBE40C1B45D89800A59593 /* PhotoCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoCollectionCell.h; path = Views/PhotoCollectionCell.h; sourceTree = "<group>"; };
+		FABBE40D1B45D89800A59593 /* PhotoCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoCollectionCell.m; path = Views/PhotoCollectionCell.m; sourceTree = "<group>"; };
+		FABBE40F1B45D8AC00A59593 /* LoaderCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoaderCollectionCell.h; path = Views/LoaderCollectionCell.h; sourceTree = "<group>"; };
+		FABBE4101B45D8AC00A59593 /* LoaderCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoaderCollectionCell.m; path = Views/LoaderCollectionCell.m; sourceTree = "<group>"; };
+		FABBE4121B45D8C200A59593 /* ReloadButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReloadButton.h; path = Views/ReloadButton.h; sourceTree = "<group>"; };
+		FABBE4131B45D8C200A59593 /* ReloadButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReloadButton.m; path = Views/ReloadButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +146,7 @@
 				FA8BCB121B408CAC00B7A166 /* APIHandler.h */,
 				FA8BCB131B408CAC00B7A166 /* APIHandler.m */,
 				FA8BCB071B408BAC00B7A166 /* Model */,
+				FABBE40B1B45D86900A59593 /* Views */,
 				FA8BCB081B408BB300B7A166 /* Controller */,
 				FABBE4011B45CF2B00A59593 /* Tools */,
 				FA8BCAD21B4084B600B7A166 /* Supporting Files */,
@@ -147,6 +157,7 @@
 		FA8BCAD21B4084B600B7A166 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FABBE4151B45D97600A59593 /* Images */,
 				FA8BCADF1B4084B600B7A166 /* Images.xcassets */,
 				FABBE3F91B45C70F00A59593 /* LaunchScreen.xib */,
 				FA8BCB031B408AC500B7A166 /* Localizable.strings */,
@@ -210,6 +221,26 @@
 				FABBE3FC1B45CEB400A59593 /* UINavigationController+StatusBarStyle.m */,
 			);
 			name = Tools;
+			sourceTree = "<group>";
+		};
+		FABBE40B1B45D86900A59593 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FABBE40C1B45D89800A59593 /* PhotoCollectionCell.h */,
+				FABBE40D1B45D89800A59593 /* PhotoCollectionCell.m */,
+				FABBE40F1B45D8AC00A59593 /* LoaderCollectionCell.h */,
+				FABBE4101B45D8AC00A59593 /* LoaderCollectionCell.m */,
+				FABBE4121B45D8C200A59593 /* ReloadButton.h */,
+				FABBE4131B45D8C200A59593 /* ReloadButton.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FABBE4151B45D97600A59593 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,8 +378,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8BCB0B1B408BC300B7A166 /* Photo.m in Sources */,
+				FABBE40E1B45D89800A59593 /* PhotoCollectionCell.m in Sources */,
 				FABBE3EF1B45C50300A59593 /* Page.m in Sources */,
 				FA8BCB141B408CAC00B7A166 /* APIHandler.m in Sources */,
+				FABBE4111B45D8AC00A59593 /* LoaderCollectionCell.m in Sources */,
 				FABBE3F81B45C68900A59593 /* PagesCollection.m in Sources */,
 				FA8BCAD81B4084B600B7A166 /* AppDelegate.m in Sources */,
 				FA8BCB171B40974300B7A166 /* PhotoDetailVC.m in Sources */,
@@ -357,6 +390,7 @@
 				FABBE40A1B45D09400A59593 /* UIImage+ImageEffects.m in Sources */,
 				FA8BCAD51B4084B600B7A166 /* main.m in Sources */,
 				FA8BCB0E1B408BCD00B7A166 /* PhotosVC.m in Sources */,
+				FABBE4141B45D8C200A59593 /* ReloadButton.m in Sources */,
 				FABBE3FD1B45CEB400A59593 /* UINavigationController+StatusBarStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
