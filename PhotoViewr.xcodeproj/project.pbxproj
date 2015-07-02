@@ -17,6 +17,10 @@
 		FA8BCB0E1B408BCD00B7A166 /* PhotosVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8BCB0D1B408BCD00B7A166 /* PhotosVC.m */; };
 		FA8BCB141B408CAC00B7A166 /* APIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8BCB131B408CAC00B7A166 /* APIHandler.m */; };
 		FA8BCB171B40974300B7A166 /* PhotoDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8BCB161B40974300B7A166 /* PhotoDetailVC.m */; };
+		FABBE3EF1B45C50300A59593 /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBE3EE1B45C50300A59593 /* Page.m */; };
+		FABBE3F51B45C60500A59593 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBE3F41B45C60500A59593 /* Response.m */; };
+		FABBE3F81B45C68900A59593 /* PagesCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBE3F71B45C68900A59593 /* PagesCollection.m */; };
+		FABBE3FA1B45C70F00A59593 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABBE3F91B45C70F00A59593 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,13 @@
 		FA8BCB131B408CAC00B7A166 /* APIHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHandler.m; sourceTree = "<group>"; };
 		FA8BCB151B40974300B7A166 /* PhotoDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoDetailVC.h; path = Controllers/PhotoDetailVC.h; sourceTree = "<group>"; };
 		FA8BCB161B40974300B7A166 /* PhotoDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoDetailVC.m; path = Controllers/PhotoDetailVC.m; sourceTree = "<group>"; };
+		FABBE3ED1B45C50300A59593 /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Page.h; path = Model/Page.h; sourceTree = "<group>"; };
+		FABBE3EE1B45C50300A59593 /* Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Page.m; path = Model/Page.m; sourceTree = "<group>"; };
+		FABBE3F31B45C60500A59593 /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Response.h; path = Model/Response.h; sourceTree = "<group>"; };
+		FABBE3F41B45C60500A59593 /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Response.m; path = Model/Response.m; sourceTree = "<group>"; };
+		FABBE3F61B45C68900A59593 /* PagesCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PagesCollection.h; path = Model/PagesCollection.h; sourceTree = "<group>"; };
+		FABBE3F71B45C68900A59593 /* PagesCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PagesCollection.m; path = Model/PagesCollection.m; sourceTree = "<group>"; };
+		FABBE3F91B45C70F00A59593 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				FA8BCADF1B4084B600B7A166 /* Images.xcassets */,
+				FABBE3F91B45C70F00A59593 /* LaunchScreen.xib */,
 				FA8BCB031B408AC500B7A166 /* Localizable.strings */,
 				FA8BCAD31B4084B600B7A166 /* Info.plist */,
 				FA8BCAD41B4084B600B7A166 /* main.m */,
@@ -154,8 +166,14 @@
 		FA8BCB071B408BAC00B7A166 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FABBE3F61B45C68900A59593 /* PagesCollection.h */,
+				FABBE3F71B45C68900A59593 /* PagesCollection.m */,
+				FABBE3ED1B45C50300A59593 /* Page.h */,
+				FABBE3EE1B45C50300A59593 /* Page.m */,
 				FA8BCB091B408BC300B7A166 /* Photo.h */,
 				FA8BCB0A1B408BC300B7A166 /* Photo.m */,
+				FABBE3F31B45C60500A59593 /* Response.h */,
+				FABBE3F41B45C60500A59593 /* Response.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -253,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8BCB011B408AC500B7A166 /* Localizable.strings in Resources */,
+				FABBE3FA1B45C70F00A59593 /* LaunchScreen.xib in Resources */,
 				FA8BCAE01B4084B600B7A166 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,9 +324,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8BCB0B1B408BC300B7A166 /* Photo.m in Sources */,
+				FABBE3EF1B45C50300A59593 /* Page.m in Sources */,
 				FA8BCB141B408CAC00B7A166 /* APIHandler.m in Sources */,
+				FABBE3F81B45C68900A59593 /* PagesCollection.m in Sources */,
 				FA8BCAD81B4084B600B7A166 /* AppDelegate.m in Sources */,
 				FA8BCB171B40974300B7A166 /* PhotoDetailVC.m in Sources */,
+				FABBE3F51B45C60500A59593 /* Response.m in Sources */,
 				FA8BCAD51B4084B600B7A166 /* main.m in Sources */,
 				FA8BCB0E1B408BCD00B7A166 /* PhotosVC.m in Sources */,
 			);
@@ -428,6 +450,7 @@
 			baseConfigurationReference = F4EF11648C5DA85BB42A9F21 /* Pods-PhotoViewr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = PhotoViewr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,6 +462,7 @@
 			baseConfigurationReference = A3EBC86DB0EE5AE25663BC47 /* Pods-PhotoViewr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = PhotoViewr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

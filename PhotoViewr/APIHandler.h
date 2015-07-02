@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "Photo.h"
+#import "Response.h"
 
 @interface APIHandler : NSObject
 
-+(NSString *)flickrPhotoListURL;
++ (id)sharedManager;
++(NSString *)flickrPhotoListURLForPage:(NSInteger)pag;
 +(NSString *)photoURL:(Photo *)photo isThumbnail:(BOOL)isThumb;
 
+-(void)getFlickrPhotoListWithPageNumber:(NSInteger)pageN Completion:(void(^)(Response *response))completion;
 @end
