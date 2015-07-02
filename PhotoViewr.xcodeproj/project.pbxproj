@@ -27,6 +27,7 @@
 		FABBE40E1B45D89800A59593 /* PhotoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBE40D1B45D89800A59593 /* PhotoCollectionCell.m */; };
 		FABBE4111B45D8AC00A59593 /* LoaderCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBE4101B45D8AC00A59593 /* LoaderCollectionCell.m */; };
 		FABBE4141B45D8C200A59593 /* ReloadButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FABBE4131B45D8C200A59593 /* ReloadButton.m */; };
+		FABBE4171B45DC0100A59593 /* main-bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FABBE4161B45DC0100A59593 /* main-bg.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		FABBE4101B45D8AC00A59593 /* LoaderCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoaderCollectionCell.m; path = Views/LoaderCollectionCell.m; sourceTree = "<group>"; };
 		FABBE4121B45D8C200A59593 /* ReloadButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReloadButton.h; path = Views/ReloadButton.h; sourceTree = "<group>"; };
 		FABBE4131B45D8C200A59593 /* ReloadButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReloadButton.m; path = Views/ReloadButton.m; sourceTree = "<group>"; };
+		FABBE4161B45DC0100A59593 /* main-bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "main-bg.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,12 +204,12 @@
 		FA8BCB081B408BB300B7A166 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FABBE3FE1B45CEF600A59593 /* CoreVC.h */,
+				FABBE3FF1B45CEF600A59593 /* CoreVC.m */,
 				FA8BCB0C1B408BCD00B7A166 /* PhotosVC.h */,
 				FA8BCB0D1B408BCD00B7A166 /* PhotosVC.m */,
 				FA8BCB151B40974300B7A166 /* PhotoDetailVC.h */,
 				FA8BCB161B40974300B7A166 /* PhotoDetailVC.m */,
-				FABBE3FE1B45CEF600A59593 /* CoreVC.h */,
-				FABBE3FF1B45CEF600A59593 /* CoreVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -239,6 +241,7 @@
 		FABBE4151B45D97600A59593 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				FABBE4161B45DC0100A59593 /* main-bg.jpg */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA8BCB011B408AC500B7A166 /* Localizable.strings in Resources */,
+				FABBE4171B45DC0100A59593 /* main-bg.jpg in Resources */,
 				FABBE3FA1B45C70F00A59593 /* LaunchScreen.xib in Resources */,
 				FA8BCAE01B4084B600B7A166 /* Images.xcassets in Resources */,
 			);
