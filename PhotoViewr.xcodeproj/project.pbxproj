@@ -15,8 +15,8 @@
 		FA8BCB011B408AC500B7A166 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA8BCB031B408AC500B7A166 /* Localizable.strings */; };
 		FA8BCB0B1B408BC300B7A166 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8BCB0A1B408BC300B7A166 /* Photo.m */; };
 		FA8BCB0E1B408BCD00B7A166 /* PhotosVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8BCB0D1B408BCD00B7A166 /* PhotosVC.m */; };
-		FA8BCB111B408C0A00B7A166 /* Photos.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8BCB101B408C0A00B7A166 /* Photos.m */; };
 		FA8BCB141B408CAC00B7A166 /* APIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8BCB131B408CAC00B7A166 /* APIHandler.m */; };
+		FA8BCB171B40974300B7A166 /* PhotoDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8BCB161B40974300B7A166 /* PhotoDetailVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +47,10 @@
 		FA8BCB0A1B408BC300B7A166 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photo.m; path = Model/Photo.m; sourceTree = "<group>"; };
 		FA8BCB0C1B408BCD00B7A166 /* PhotosVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotosVC.h; path = Controllers/PhotosVC.h; sourceTree = "<group>"; };
 		FA8BCB0D1B408BCD00B7A166 /* PhotosVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotosVC.m; path = Controllers/PhotosVC.m; sourceTree = "<group>"; };
-		FA8BCB0F1B408C0A00B7A166 /* Photos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Photos.h; path = Model/Photos.h; sourceTree = "<group>"; };
-		FA8BCB101B408C0A00B7A166 /* Photos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Photos.m; path = Model/Photos.m; sourceTree = "<group>"; };
 		FA8BCB121B408CAC00B7A166 /* APIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIHandler.h; sourceTree = "<group>"; };
 		FA8BCB131B408CAC00B7A166 /* APIHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIHandler.m; sourceTree = "<group>"; };
+		FA8BCB151B40974300B7A166 /* PhotoDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoDetailVC.h; path = Controllers/PhotoDetailVC.h; sourceTree = "<group>"; };
+		FA8BCB161B40974300B7A166 /* PhotoDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoDetailVC.m; path = Controllers/PhotoDetailVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +156,6 @@
 			children = (
 				FA8BCB091B408BC300B7A166 /* Photo.h */,
 				FA8BCB0A1B408BC300B7A166 /* Photo.m */,
-				FA8BCB0F1B408C0A00B7A166 /* Photos.h */,
-				FA8BCB101B408C0A00B7A166 /* Photos.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -167,6 +165,8 @@
 			children = (
 				FA8BCB0C1B408BCD00B7A166 /* PhotosVC.h */,
 				FA8BCB0D1B408BCD00B7A166 /* PhotosVC.m */,
+				FA8BCB151B40974300B7A166 /* PhotoDetailVC.h */,
+				FA8BCB161B40974300B7A166 /* PhotoDetailVC.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -307,7 +307,7 @@
 				FA8BCB0B1B408BC300B7A166 /* Photo.m in Sources */,
 				FA8BCB141B408CAC00B7A166 /* APIHandler.m in Sources */,
 				FA8BCAD81B4084B600B7A166 /* AppDelegate.m in Sources */,
-				FA8BCB111B408C0A00B7A166 /* Photos.m in Sources */,
+				FA8BCB171B40974300B7A166 /* PhotoDetailVC.m in Sources */,
 				FA8BCAD51B4084B600B7A166 /* main.m in Sources */,
 				FA8BCB0E1B408BCD00B7A166 /* PhotosVC.m in Sources */,
 			);
