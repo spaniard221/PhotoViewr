@@ -369,6 +369,25 @@
     }
 }
 
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    
+    for (UICollectionViewCell *cell in self.collectionVPhotos.visibleCells) {
+        
+        if (![cell isKindOfClass:[LoaderCollectionCell class]]){
+            
+            NSInteger section=[self.collectionVPhotos indexPathForCell:cell].section;
+            Page *page=[[PagesCollection sharedManager] pageAtIndex:section];
+            if (page != nil){
+                
+                if (page.photos==nil){
+                    [self fetchDataFromAPIForPage:page.pageNumber];
+                    break;
+                }
+            }
+        }
+    }
+}
+
 
 
 
@@ -379,8 +398,28 @@
 #pragma mark Warnings
 
 - (void)didReceiveMemoryWarning {
+    
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    
+    for (UICollectionViewCell *cell in self.collectionVPhotos.visibleCells) {
+        
+        if (![cell isKindOfClass:[LoaderCollectionCell class]]){
+            
+            NSInteger section=[self.collectionVPhotos indexPathForCell:cell].section;
+            
+            Page *page=[[PagesCollection sharedManager] pageAtIndex:section];
+            if (page != nil){
+                
+                if (page.photos != nil){
+                    
+                    [[PagesCollection sharedManager] clearAllPhotosExceptForCurrentPage:page.pageNumber];
+                    [self.collectionVPhotos reloadData];
+                    break;
+                }
+            }
+        }
+    }
 }
 
 
