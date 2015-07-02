@@ -12,3 +12,9 @@
 "button_text_cancel" = "Cancel";
 
 "no_internet_connection" = "You are not connected to the internet!";
+
+"no_response_from_server" = "No response from server";
+
+"unexpected_error_while_processing_data" = "An unexpected error occured while processing the response";
+
+"no_photos_found" = "No photos found!";

@@ -139,17 +139,17 @@
             
             NSDictionary *jPhotos=[responseObject objectForKey:@"photos"];
             if (jPhotos == nil)
-                responseReturn.error=NSLocalizedString(@"", nil);
+                responseReturn.error=NSLocalizedString(@"no_response_from_server", nil);
             
             else{
                 responseReturn.object=[[Page alloc] initWithJSON:jPhotos];
                 if (responseReturn.object==nil)
-                    responseReturn.error=NSLocalizedString(@"", nil);
+                    responseReturn.error=NSLocalizedString(@"unexpected_error_while_processing_data", nil);
                 
                 else{
                     Page *page=(Page *)responseReturn.object;
                     if (![page hasPhotos])
-                        responseReturn.error=NSLocalizedString(@"", nil);
+                        responseReturn.error=NSLocalizedString(@"no_photos_found", nil);
                 }
             }
         }
