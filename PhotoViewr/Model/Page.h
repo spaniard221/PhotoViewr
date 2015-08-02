@@ -16,6 +16,6 @@
 @property (assign, nonatomic) NSInteger totalPages;
 
 -(instancetype)initWithJSON:(NSDictionary *)json;
--(BOOL)hasPhotos;
+
 
 @end

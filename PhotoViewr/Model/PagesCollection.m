@@ -11,7 +11,6 @@
 @interface PagesCollection()
 
 @property (retain, nonatomic) NSMutableArray *pagesArr;
-@property (assign, nonatomic) NSInteger lastPage;
 @property (assign, nonatomic) NSInteger totalPagesFromAPI;
 @end
 
@@ -38,7 +37,7 @@
     self=[super init];
     if (self) {
         
-        self.lastPage=0;
+        self.lastPageLoaded=0;
         self.totalPagesFromAPI=0;
     }
     
@@ -47,19 +46,19 @@
 
 -(NSInteger)numberOfPagesLoaded{
     
-    return [self.pagesArr count];
+    return self.pagesArr.count;
 }
 
 -(Page *)pageAtIndex:(NSInteger)index{
     
-    if (index >= [self.pagesArr count] || index < 0) return nil;
+    if (index >= self.pagesArr.count || index < 0) return nil;
     
     return [self.pagesArr objectAtIndex:index];
 }
 
 -(BOOL)canRequestMorePagesFromAPI{
     
-    if ([self.pagesArr count] < self.totalPagesFromAPI) return YES;
+    if (self.pagesArr.count < self.totalPagesFromAPI) return YES;
     
     return NO;
 }
@@ -86,16 +85,6 @@
     if (!found)
         [self.pagesArr addObject:page];
     
-}
-
--(void)setLastPageLoaded:(NSInteger)lastPage_{
-    
-    self.lastPage=lastPage_;
-}
-
--(NSInteger)lastPageLoaded{
-    
-    return self.lastPage;
 }
 
 -(void)clearAllPhotosExceptForCurrentPage:(NSInteger)cPage{

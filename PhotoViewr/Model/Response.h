@@ -10,8 +10,8 @@
 
 @interface Response : NSObject
 
-@property (retain, nonatomic) NSObject *object;
-@property (retain, nonatomic) NSString *error;
+@property (strong, nonatomic) NSObject *object;
+@property (strong, nonatomic) NSString *error;
 @property (assign, nonatomic) BOOL errorOccured;
 
 @end

@@ -86,11 +86,11 @@
         pSize=@"q";
     
     NSString *url=[NSString stringWithFormat:@"http://farm%@.%@/%@/%@_%@_%@%@",
-                   photo.pFarm,
+                   photo.farm,
                    host,
-                   photo.pServer,
+                   photo.server,
                    photo.id_,
-                   photo.pSecret,
+                   photo.secret,
                    pSize,
                    fType];
     
@@ -148,7 +148,7 @@
                 
                 else{
                     Page *page=(Page *)responseReturn.object;
-                    if (![page hasPhotos])
+                    if (page.photos.count == 0)
                         responseReturn.error=NSLocalizedString(@"no_photos_found", nil);
                 }
             }

@@ -10,12 +10,12 @@
 
 @interface Photo : NSObject
 
-@property (retain, nonatomic) NSString *id_;
-@property (retain, nonatomic) NSString *pOwner;
-@property (retain, nonatomic) NSString *pSecret;
-@property (retain, nonatomic) NSString *pServer;
-@property (retain, nonatomic) NSString *pFarm;
-@property (retain, nonatomic) NSString *pTitle;
+@property (strong, nonatomic) NSString *id_;
+@property (strong, nonatomic) NSString *owner;
+@property (strong, nonatomic) NSString *secret;
+@property (strong, nonatomic) NSString *server;
+@property (strong, nonatomic) NSString *farm;
+@property (strong, nonatomic) NSString *title;
 
 
 -(instancetype)initWithJSON:(NSDictionary *)json;

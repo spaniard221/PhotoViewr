@@ -16,6 +16,8 @@
 
 + (id)sharedManager;
 
+@property(assign, nonatomic) NSInteger lastPageLoaded;
+
 -(NSInteger)numberOfPagesLoaded;
 -(NSInteger)lastPageLoaded;
 -(Page *)pageAtIndex:(NSInteger)index;

@@ -10,7 +10,7 @@
 
 @interface LoaderCollectionCell : UICollectionViewCell
 
-@property (retain, nonatomic) UIActivityIndicatorView *loader;
+@property (strong, nonatomic) UIActivityIndicatorView *loader;
 
 -(void)setUpUI;
 

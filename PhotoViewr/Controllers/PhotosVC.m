@@ -170,7 +170,7 @@
     }
 }
 
--(void)checkReachability{
+-(void)checkInternetConnectivity{
     
     // If connection available
     if ([[AFNetworkReachabilityManager sharedManager] isReachable])
@@ -178,7 +178,7 @@
     
     else{ // If no connection available
         
-        if ([[PagesCollection sharedManager] numberOfPagesLoaded]==0){//([self.pagesArr count]==0){
+        if ([[PagesCollection sharedManager] numberOfPagesLoaded]==0){
             
             [self showLoader:NO];
             [self showRefreshButton:YES];
@@ -209,14 +209,14 @@
     
     
     if (isRetry)
-        [NSTimer scheduledTimerWithTimeInterval:0.7 target:self selector:@selector(checkReachability) userInfo:nil repeats:NO];
+        [NSTimer scheduledTimerWithTimeInterval:0.7 target:self selector:@selector(checkInternetConnectivity) userInfo:nil repeats:NO];
     
     else{
         
         // Check wether there's a connection available
         [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status){
             
-            [self checkReachability];
+            [self checkInternetConnectivity];
         }];
     }
 }
@@ -310,7 +310,7 @@
         Page *page=[[PagesCollection sharedManager] pageAtIndex:indexPath.section];
         if (page != nil){
             
-            if (indexPath.row < [page.photos count]){
+            if (indexPath.row < page.photos.count){
                 
                 Photo *photo=[page.photos objectAtIndex:indexPath.row];
                 
@@ -334,7 +334,7 @@
         
         // Get selected photo
         Page *page=[[PagesCollection sharedManager] pageAtIndex:indexPath.section];
-        if (indexPath.row < [page.photos count]){
+        if (indexPath.row < page.photos.count){
             
             
             Photo *photo=[page.photos objectAtIndex:indexPath.row];
@@ -351,6 +351,7 @@
                 
                 [UIView animateWithDuration:0.3 animations:^{
                     
+
                     cell.imgVPhoto.alpha=1.0;
                     
                 }completion:^(BOOL finished){

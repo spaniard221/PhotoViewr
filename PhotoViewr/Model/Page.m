@@ -9,6 +9,8 @@
 #import "Page.h"
 #import "Photo.h"
 
+
+
 @implementation Page
 
 -(instancetype)initWithJSON:(NSDictionary *)json{
@@ -42,15 +44,9 @@
             self.photos=nil;
         
     }
-    
+
     return self;
 }
 
--(BOOL)hasPhotos{
-    
-    if ([self.photos count]==0) return NO;
-    
-    return YES;
-}
 
 @end

@@ -41,7 +41,7 @@
     CGFloat width=self.view.frame.size.width;
     CGFloat height=self.view.frame.size.height;
     
-    [self setNavigationTitle:self.photoSelected.pTitle];
+    [self setNavigationTitle:self.photoSelected.title];
     
     [self setUpBgImage:self.imageBg WithWidth:width Height:height];
     

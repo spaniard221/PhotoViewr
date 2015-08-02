@@ -10,8 +10,8 @@
 
 @interface PhotoCollectionCell : UICollectionViewCell
 
-@property (retain, nonatomic) UIImageView *imgVPhoto;
-@property (retain, nonatomic) UIImageView *imgVBg;
+@property (strong, nonatomic) UIImageView *imgVPhoto;
+@property (strong, nonatomic) UIImageView *imgVBg;
 
 
 -(void)setUI;

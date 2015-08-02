@@ -8,6 +8,8 @@
 
 #import "Photo.h"
 
+#define SET_IF_NOT_NULL(TARGET, VAL) if(VAL != [NSNull null]) { TARGET = VAL; }
+
 @implementation Photo
 
 
@@ -16,23 +18,12 @@
     self=[super init];
     if (self) {
         
-        if ((NSNull *)[json objectForKey:@"id"] != [NSNull null])
-            self.id_=[json objectForKey:@"id"];
-
-        if ((NSNull *)[json objectForKey:@"owner"] != [NSNull null])
-            self.pOwner=[json objectForKey:@"owner"];
-        
-        if ((NSNull *)[json objectForKey:@"secret"] != [NSNull null])
-            self.pSecret=[json objectForKey:@"secret"];
-        
-        if ((NSNull *)[json objectForKey:@"server"] != [NSNull null])
-            self.pServer=[json objectForKey:@"server"];
-        
-        if ((NSNull *)[json objectForKey:@"farm"] != [NSNull null])
-            self.pFarm=[json objectForKey:@"farm"];
-        
-        if ((NSNull *)[json objectForKey:@"title"] != [NSNull null])
-            self.pTitle=[json objectForKey:@"title"];
+        SET_IF_NOT_NULL(self.id_, [json objectForKey:@"id"]);
+        SET_IF_NOT_NULL(self.owner, [json objectForKey:@"owner"]);
+        SET_IF_NOT_NULL(self.secret, [json objectForKey:@"secret"]);
+        SET_IF_NOT_NULL(self.server, [json objectForKey:@"server"]);
+        SET_IF_NOT_NULL(self.farm, [json objectForKey:@"farm"]);
+        SET_IF_NOT_NULL(self.title, [json objectForKey:@"title"]);
         
     }
     
