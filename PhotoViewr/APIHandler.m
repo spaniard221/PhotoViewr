@@ -26,6 +26,14 @@
 #define FLICKR_API_PARAM_PRIVACY_FILTER @"privacy_filter="
 #define FLICKR_API_VALUES_PRIVACY_FILTER @"1"
 
+#define FLICKR_IMAGE_URL_START @"http://farm"
+#define FLICKR_IMAGE_HOST @"staticflickr.com"
+#define FILE_TYPE @".jpg"
+#define IMAGE_SIZE_THUMB_TYPE @"q"
+#define IMAGE_SIZE_FULL_TYPE @"b"
+
+#define TIMEOUT_VALUE 10.0
+
 
 @interface APIHandler()
 
@@ -76,16 +84,18 @@
 
 +(NSString *)photoURL:(Photo *)photo isThumbnail:(BOOL)isThumb{
     
-    NSString *host=@"staticflickr.com";
-    NSString *fType=@".jpg";
-    NSString *pSize=@"b";
+    NSString *host=FLICKR_IMAGE_HOST;
+    NSString *fType=FILE_TYPE;
+    NSString *pSize=IMAGE_SIZE_FULL_TYPE;
+    
     
     // When thumb=true, then smaller image for gallery screen
     // else photo detail screen
     if (isThumb)
-        pSize=@"q";
+        pSize=IMAGE_SIZE_THUMB_TYPE;
     
-    NSString *url=[NSString stringWithFormat:@"http://farm%@.%@/%@/%@_%@_%@%@",
+    NSString *url=[NSString stringWithFormat:@"%@%@.%@/%@/%@_%@_%@%@",
+                   FLICKR_IMAGE_URL_START,
                    photo.farm,
                    host,
                    photo.server,
