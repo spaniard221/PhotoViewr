@@ -25,13 +25,17 @@
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     
     
+    [[UINavigationBar appearance] setTranslucent:NO];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:255.0/255.0 green:144.0/255.0 blue:62.0/255.0 alpha:1.0]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    NSDictionary *dTextAttribs=@{NSForegroundColorAttributeName:[UIColor whiteColor],
+                                 NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:24.0]};
+    [[UINavigationBar appearance] setTitleTextAttributes:dTextAttribs];
+    
+    
     PhotosVC *photosVC=[PhotosVC new];
     self.naviController=[[UINavigationController alloc] initWithRootViewController:photosVC];
-    [self.naviController.navigationBar setBarTintColor:[UIColor colorWithRed:255.0/255.0 green:144.0/255.0 blue:62.0/255.0 alpha:1.0]];
-    self.naviController.navigationBar.tintColor=[UIColor whiteColor];
-    [self.naviController.navigationBar setTranslucent:NO];
-    
-    
     self.window=[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController=self.naviController;
     [self.window makeKeyAndVisible];
