@@ -18,12 +18,12 @@
     self=[super init];
     if (self) {
         
-        SET_IF_NOT_NULL(self.id_, [json objectForKey:@"id"]);
-        SET_IF_NOT_NULL(self.owner, [json objectForKey:@"owner"]);
-        SET_IF_NOT_NULL(self.secret, [json objectForKey:@"secret"]);
-        SET_IF_NOT_NULL(self.server, [json objectForKey:@"server"]);
-        SET_IF_NOT_NULL(self.farm, [json objectForKey:@"farm"]);
-        SET_IF_NOT_NULL(self.title, [json objectForKey:@"title"]);
+        SET_IF_NOT_NULL(self.id_, json[@"id"]);
+        SET_IF_NOT_NULL(self.owner, json[@"owner"]);
+        SET_IF_NOT_NULL(self.secret, json[@"secret"]);
+        SET_IF_NOT_NULL(self.server, json[@"server"]);
+        SET_IF_NOT_NULL(self.farm, json[@"farm"]);
+        SET_IF_NOT_NULL(self.title, json[@"title"]);
         
     }
     
