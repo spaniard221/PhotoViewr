@@ -25,8 +25,8 @@
 
 @interface PhotosVC ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
-@property (retain, nonatomic) UICollectionView *collectionVPhotos;
-@property (retain, nonatomic) ReloadButton *btnReload;
+@property (strong, nonatomic) UICollectionView *collectionVPhotos;
+@property (strong, nonatomic) ReloadButton *btnReload;
 @property (assign, nonatomic) BOOL performingDataFetch;
 
 @end

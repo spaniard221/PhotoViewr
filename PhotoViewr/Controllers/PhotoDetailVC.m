@@ -10,12 +10,12 @@
 
 @interface PhotoDetailVC ()<UIScrollViewDelegate>
 
-@property (retain, nonatomic) Photo *photoSelected;
-@property (retain, nonatomic) UIImage *imageBg;
+@property (strong, nonatomic) Photo *photoSelected;
+@property (strong, nonatomic) UIImage *imageBg;
 
-@property (retain, nonatomic) UIScrollView *scrollView;
+@property (strong, nonatomic) UIScrollView *scrollView;
 
-@property (retain, nonatomic) UIImageView *imgVPhoto;
+@property (strong, nonatomic) UIImageView *imgVPhoto;
 
 
 @end

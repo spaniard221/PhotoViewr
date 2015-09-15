@@ -12,7 +12,7 @@
 
 @interface AppDelegate ()
 
-@property (retain, nonatomic) UINavigationController *naviController;
+@property (strong, nonatomic) UINavigationController *naviController;
 
 @end
 

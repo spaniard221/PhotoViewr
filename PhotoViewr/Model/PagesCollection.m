@@ -10,7 +10,7 @@
 
 @interface PagesCollection()
 
-@property (retain, nonatomic) NSMutableArray *pagesArr;
+@property (strong, nonatomic) NSMutableArray *pagesArr;
 @property (assign, nonatomic) NSInteger totalPagesFromAPI;
 @end
 
