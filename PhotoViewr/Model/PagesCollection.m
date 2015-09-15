@@ -17,7 +17,7 @@
 @implementation PagesCollection
 
 
-+ (id)sharedManager{
++ (instancetype)sharedManager{
     
     static PagesCollection *pagesCollection = nil;
     static dispatch_once_t onceToken;
@@ -53,7 +53,7 @@
     
     if (index >= self.pagesArr.count || index < 0) return nil;
     
-    return [self.pagesArr objectAtIndex:index];
+    return self.pagesArr[index];
 }
 
 -(BOOL)canRequestMorePagesFromAPI{
@@ -70,9 +70,9 @@
     self.totalPagesFromAPI=page.totalPages;
     
     BOOL found=NO;
-    for (int i=0; i < [self.pagesArr count]; i++) {
+    for (int i=0; i < self.pagesArr.count; i++) {
         
-        Page *current=[self.pagesArr objectAtIndex:i];
+        Page *current=self.pagesArr[i];
         if (current.pageNumber==page.pageNumber){
             
             found=YES;
@@ -80,7 +80,7 @@
             break;
         }
     }
-    
+
     
     if (!found)
         [self.pagesArr addObject:page];

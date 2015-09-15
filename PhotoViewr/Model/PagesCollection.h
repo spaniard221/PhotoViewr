@@ -14,14 +14,13 @@
 @interface PagesCollection : NSObject
 
 
-+ (id)sharedManager;
++ (instancetype)sharedManager;
 
 @property(assign, nonatomic) NSInteger lastPageLoaded;
 
 -(NSInteger)numberOfPagesLoaded;
 -(NSInteger)lastPageLoaded;
 -(Page *)pageAtIndex:(NSInteger)index;
--(void)setLastPageLoaded:(NSInteger)lastPage;
 -(void)clearAllPhotosExceptForCurrentPage:(NSInteger)cPage;
 -(void)addPage:(Page *)page;
 -(BOOL)canRequestMorePagesFromAPI;
