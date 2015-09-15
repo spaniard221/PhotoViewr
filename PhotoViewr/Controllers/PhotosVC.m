@@ -13,9 +13,6 @@
 #import "PagesCollection.h"
 #import "Page.h"
 #import "ReloadButton.h"
-
-
-
 #import <AFNetworking.h>
 
 
@@ -37,6 +34,9 @@
 @implementation PhotosVC
 
 
+
+#pragma mark - View methods
+
 -(void)loadView{
     
     [super loadView];
@@ -48,14 +48,15 @@
     CGFloat width=self.view.frame.size.width;
     CGFloat height=self.view.frame.size.height;
     
+    
+    self.title=[self appName];
+    
+    
     // Set background image
     [self setUpBgImage:[UIImage imageNamed:@"main-bg.jpg"] WithWidth:width Height:height];
     
     // Setup collectionView
     [self setUpCollectionViewWithWidth:width Height:height];
-    
-    // Set navigation title
-    [self setNavigationTitle:[self appName]];
     
     // Fetch data from API
     [self reloadRequest];
@@ -71,7 +72,7 @@
 
 
 
-#pragma mark Private functions and methods
+#pragma mark - Private functions and methods
 
 -(void)setUpCollectionViewWithWidth:(CGFloat)width Height:(CGFloat)height{
     
@@ -193,7 +194,7 @@
 
 
 
-#pragma mark Actions
+#pragma mark - Actions
 
 -(void)reloadRequest{
     
@@ -228,7 +229,7 @@
 
 
 
-#pragma mark UICollectionView delegate methods
+#pragma mark - UICollectionView delegate methods
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     
@@ -312,7 +313,7 @@
             
             if (indexPath.row < page.photos.count){
                 
-                Photo *photo=[page.photos objectAtIndex:indexPath.row];
+                Photo *photo=page.photos[indexPath.row];
                 
                 // Get image from URL
                 cell.imgVPhoto.hidden=NO;
@@ -337,7 +338,7 @@
         if (indexPath.row < page.photos.count){
             
             
-            Photo *photo=[page.photos objectAtIndex:indexPath.row];
+            Photo *photo=page.photos[indexPath.row];
             
             // Instantiate the detail viewcontroller
             PhotoDetailVC *photoDetailVC=[[PhotoDetailVC alloc] initWithPhoto:photo Image:cell.imgVPhoto.image];
@@ -396,7 +397,7 @@
 
 
 
-#pragma mark Warnings
+#pragma mark - Warnings
 
 - (void)didReceiveMemoryWarning {
     
