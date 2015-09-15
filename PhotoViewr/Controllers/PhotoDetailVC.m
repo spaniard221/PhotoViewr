@@ -34,6 +34,11 @@
     return self;
 }
 
+
+
+
+#pragma mark - View methods
+
 -(void)loadView{
     
     [super loadView];
@@ -41,7 +46,9 @@
     CGFloat width=self.view.frame.size.width;
     CGFloat height=self.view.frame.size.height;
     
-    [self setNavigationTitle:self.photoSelected.title];
+    
+    self.title=self.photoSelected.title;
+    
     
     [self setUpBgImage:self.imageBg WithWidth:width Height:height];
     
@@ -76,7 +83,7 @@
 
 
 
-#pragma mark Private functions and methods
+#pragma mark - Private functions and methods
 
 -(void)setupScrollViewWithWidth:(CGFloat)width Height:(CGFloat)height{
     
@@ -101,7 +108,7 @@
 
 
 
-#pragma mark UIScrolView delegate methods
+#pragma mark - UIScrolView delegate methods
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView{
     
@@ -115,7 +122,7 @@
 
 
 
-#pragma mark Warnings
+#pragma mark - Warnings
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
