@@ -124,7 +124,7 @@
         Page *page=(Page *)response.object;
         if (page != nil){
             [[PagesCollection sharedManager] addPage:page];
-            [[PagesCollection sharedManager] setLastPageLoaded:pageNum];
+            [PagesCollection sharedManager].lastPageLoaded=pageNum;
         }
         
         
@@ -171,15 +171,15 @@
     }
 }
 
--(void)checkInternetConnectivity{
+-(void)checkIfInternetConnectionIsAvailable{
     
     // If connection available
-    if ([[AFNetworkReachabilityManager sharedManager] isReachable])
-        [self fetchDataFromAPIForPage:[[PagesCollection sharedManager] lastPageLoaded]+1];
+    if ([AFNetworkReachabilityManager sharedManager].isReachable)
+        [self fetchDataFromAPIForPage:[PagesCollection sharedManager].lastPageLoaded +1 ];
     
     else{ // If no connection available
         
-        if ([[PagesCollection sharedManager] numberOfPagesLoaded]==0){
+        if ([PagesCollection sharedManager].numberOfPagesLoaded==0){
             
             [self showLoader:NO];
             [self showRefreshButton:YES];
@@ -210,14 +210,14 @@
     
     
     if (isRetry)
-        [NSTimer scheduledTimerWithTimeInterval:0.7 target:self selector:@selector(checkInternetConnectivity) userInfo:nil repeats:NO];
+        [NSTimer scheduledTimerWithTimeInterval:0.7 target:self selector:@selector(checkIfInternetConnectionIsAvailable) userInfo:nil repeats:NO];
     
     else{
         
         // Check wether there's a connection available
         [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status){
             
-            [self checkInternetConnectivity];
+            [self checkIfInternetConnectionIsAvailable];
         }];
     }
 }
@@ -286,7 +286,7 @@
         // If the number of pages +1 have not been exceeded, then
         // fetch data from the next page
         if ([[PagesCollection sharedManager] canRequestMorePagesFromAPI])
-            [self fetchDataFromAPIForPage:[[PagesCollection sharedManager] lastPageLoaded]+1];
+            [self fetchDataFromAPIForPage:[PagesCollection sharedManager].lastPageLoaded + 1];
         
         else // Hide loader to imply that are no more items to load
             [cell.loader stopAnimating];

@@ -140,14 +140,14 @@
         
         
         
-        if ([responseObject objectForKey:@"message"] != nil){
+        if (responseObject[@"message"] != nil){
             
-            responseReturn.error=[responseObject objectForKey:@"message"];
+            responseReturn.error=responseObject[@"message"];
             responseReturn.errorOccured=YES;
         }
         else{
             
-            NSDictionary *jPhotos=[responseObject objectForKey:@"photos"];
+            NSDictionary *jPhotos=responseObject[@"photos"];
             if (jPhotos == nil)
                 responseReturn.error=NSLocalizedString(@"no_response_from_server", nil);
             

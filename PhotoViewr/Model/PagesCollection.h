@@ -19,7 +19,6 @@
 @property(assign, nonatomic) NSInteger lastPageLoaded;
 
 -(NSInteger)numberOfPagesLoaded;
--(NSInteger)lastPageLoaded;
 -(Page *)pageAtIndex:(NSInteger)index;
 -(void)clearAllPhotosExceptForCurrentPage:(NSInteger)cPage;
 -(void)addPage:(Page *)page;
