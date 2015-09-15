@@ -18,6 +18,11 @@
 @implementation CoreVC
 
 
+
+
+
+#pragma mark - View methods
+
 -(void)loadView{
     
     [super loadView];
@@ -35,6 +40,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.backBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@""
+                                                                           style:UIBarButtonItemStylePlain
+                                                                          target:nil
+                                                                          action:nil];
+    
 }
 
 - (UIStatusBarStyle) preferredStatusBarStyle {
@@ -47,19 +57,7 @@
 
 
 
-#pragma mark Public functions and methods
-
--(void)setNavigationTitle:(NSString *)title{
-    
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, self.navigationController.navigationBar.frame.size.height)];
-    titleLabel.text = title;
-    titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:24];
-    titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.textColor = [UIColor whiteColor];
-    titleLabel.textAlignment=NSTextAlignmentCenter;
-    
-    self.navigationItem.titleView=titleLabel;
-}
+#pragma mark - Public functions and methods
 
 -(NSString *)appName{
     
@@ -106,7 +104,7 @@
 
 
 
-#pragma mark Warnings
+#pragma mark - Warnings
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

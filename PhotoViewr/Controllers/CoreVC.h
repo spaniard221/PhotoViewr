@@ -17,7 +17,6 @@
 
 @interface CoreVC : UIViewController
 
--(void)setNavigationTitle:(NSString *)title;
 -(void)setUpBgImage:(UIImage *)image WithWidth:(CGFloat)width Height:(CGFloat)height;
 -(void)showLoader:(BOOL)show;
 -(void)showAlertWithText:(NSString *)text ;
