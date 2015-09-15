@@ -10,7 +10,7 @@
 
 @interface Page : NSObject
 
-@property (retain, nonatomic) NSMutableArray *photos;
+@property (strong, nonatomic) NSMutableArray *photos;
 @property (assign, nonatomic) NSInteger photoCount;
 @property (assign, nonatomic) NSInteger pageNumber;
 @property (assign, nonatomic) NSInteger totalPages;
